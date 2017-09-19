@@ -4,9 +4,9 @@
  *
  * Contains header assets.
  *
- * @link [INIT]
+ * @link Happy Menocal
  *
- * @package [INIT]
+ * @package Happy
  * @subpackage Wordpress
  * @since 1.0
  * @version 1.0

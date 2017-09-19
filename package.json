@@ -1,23 +1,23 @@
 {
-  "name": "INIT",
+  "name": "HappyMenocal-Dyn-17",
   "version": "1.0.0",
-  "description": "INIT",
+  "description": "Happy Menocal Dynamic Site 2017",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "INIT"
+    "url": "https://github.com/sdco-partners/happymenocal-dyna-17"
   },
   "author": "SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "INIT"
+    "url": "Ihttps://github.com/sdco-partners/happymenocal-dyna-17#bugs"
   },
-  "homepage": "INIT",
+  "homepage": "happymenocal.com",
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.1.1",
