@@ -44,13 +44,18 @@
     <div class="drop-down">
     <?php if(have_rows('left_nav')) : 
       while(have_rows('left_nav')) : 
+        $title = get_sub_field('title');
+        $link = get_sub_field('link');
+        $class = strtolower(str_replace(' ', '-', $title));
         the_row(); ?>
-        <a href="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('title'); ?></a>
-        <?php endwhile;
+        <a class="<?php echo $class; ?>" href="<?php echo $link; ?>">
+          <?php echo $title; ?>
+        </a>
+      <?php endwhile;
       endif; ?>
   </div>
   <div class="logo">
-    <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.jpg" width="100px" height="100px">
+    <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.gif">
   </div>
   <div class="right-link">
     <?php if(have_rows('right_nav')) : 

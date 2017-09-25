@@ -5,7 +5,7 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 header
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   width: 100%
@@ -13,7 +13,8 @@ header
 
   .left-nav,
   .drop-down,
-  .right-nav
+  .right-link,
+  .logo
     position: absolute
 
   .left-nav,
@@ -21,17 +22,34 @@ header
     left: 50px
 
   .left-nav,
-  .right-nav
+  .right-link,
+  .logo
     top: 50px
 
   .drop-down
     top: 100px
 
-  .right-nav
+  .right-link
     right: 50px
 
+  .logo
+    left: calc(50% - 56px)
+    width: 112px
+    height: 117px
+
+.drop-down
+  a
+    display: block
+    margin-bottom: 20px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+header
+  @extend %Hell
+
+  a
+    color: $black
+
