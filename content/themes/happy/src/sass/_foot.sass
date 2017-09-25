@@ -1,4 +1,4 @@
-/*  _foot.sass */
+/* _foot.sass */
 
 /* PAGE CONTEXT -> For positioning items */
 /* includes positioning styles like display, padding, margin, height */
@@ -7,14 +7,38 @@
 .pagemarkers
   position: fixed
   bottom: 0
-  left: 0
+  right: 0
+  width: 100%
+
+  .right-middle-mark,
+  .right-bottom-mark,
+  .left-bottom-mark
+    position: absolute
+
+  .right-middle-mark,
+  .right-bottom-mark
+    right: 50px
+
+  .left-bottom-mark
+    left: 50px
+
+  .right-bottom-mark,
+  .left-bottom-mark
+    bottom: 50px
+
 
   .right-middle-mark
-    position: absolute
-    bottom: 50vh
-
+    bottom: calc(50vh - 82px)
+    transform-origin: right top 0
+    transform: rotate(90deg)
+    width: 165px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
-/* INCEPTION RULE: DO NOT nest more than 4  */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+
+.pagemarkers
+  @extend %Hell
+
