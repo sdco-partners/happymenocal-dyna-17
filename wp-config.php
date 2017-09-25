@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = '10.1.10.96/happymenocal-dyna-17';
+$local_path = $_SERVER['SERVER_NAME'] . '/happymenocal-dyna-17';
 // $_SERVER['SERVER_NAME']
 
 

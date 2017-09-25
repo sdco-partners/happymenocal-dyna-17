@@ -1,15 +1,34 @@
 /* Colors */
 
-$black: 
+$black: #000
 $white: #fff
 
-/* Font Sizes & Fonts */
 
-$sx3: 0.5em
-$sx2: 0.7em
-$sx1: 0.8em
-$body: 18px
-$bx1: 1.2em 
-$bx2: 1.4em
-$bx3: 1.6em  
+/* Font Face */
+
+@font-face 
+	font-family: 'Canela Web'
+	src: url('../assets/Canela-LightItalic-Web.eot')
+	src: url('../assets/Canela-LightItalic-Web.eot?#iefix') format('embedded-opentype'),
+	url('../assets/Canela-LightItalic-Web.woff2') format('woff2'),
+	url('../assets/Canela-LightItalic-Web.woff') format('woff')
+	font-weight: 300
+	font-style: italic
+	font-stretch: normal
+
+
+
+/* Font Classes */
+
+%Canela-LtIt 
+	font-family: 'Canela Web', 'Georgia', serif
+	font-weight: 300
+	font-style: italic
+	font-stretch: normal
+  
+
+%Hell-rg
+  font-family: 'Helvetica', 'Arial', sans-serif
+  font-weight: 400
+
 

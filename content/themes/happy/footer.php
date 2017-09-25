@@ -14,10 +14,22 @@
 
 ?>
 
-
-
-
-<?php wp_footer(); ?>
+	<!-- SECTION: PAGE MARKERS -->
+	<section class="pagemarkers">
+	  <div class="right-middle-mark">
+	    happy menocal studio
+	  </div>
+	  <div class="right-bottom-mark">
+	    INSTAGRAM
+	  </div>
+	  <div class="left-bottom-mark">
+	    &copy; HAPPY MENOCAL <?php echo date('Y'); ?>
+	  </div>
+	</section>
+	<!-- SCRIPTS || SCRIPTS || SCRIPTS -->
 
 </body><!-- end -->
 </html>
+
+
+<?php wp_footer(); ?>
