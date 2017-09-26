@@ -26,10 +26,11 @@
 	    &copy; HAPPY MENOCAL <?php echo date('Y'); ?>
 	  </div>
 	</section>
-	<!-- SCRIPTS || SCRIPTS || SCRIPTS -->
+
+	<!-- SCRIPTS -->
+	<?php wp_footer(); ?>
 
 </body><!-- end -->
 </html>
 
 
-<?php wp_footer(); ?>

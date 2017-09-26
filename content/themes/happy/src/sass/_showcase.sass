@@ -1,11 +1,102 @@
-/*  _theme.sass */
+/* _theme.sass */
 
 /* PAGE CONTEXT -> For positioning items */
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+.content-blocks
+  width: 100%
+  max-width: 1280px
+  margin: 0 auto
+  padding-top: 250px
+  padding-bottom: 200px
+  position: relative
+  z-index: 10
+
+  .bold-copy-block
+    width: 100%
+    max-width: 360px
+    margin: 0 auto
+
+  .accent-copy-block
+    +flex
+    width: 100%
+    max-width: 575px
+    margin: 100px auto 0
+
+    .icon
+      width: 145px
+      height: 82px
+
+    .copy
+      width: 100%
+      max-width: 330px
+      margin-left: 130px
+      margin-top: 20px
+
+    .icon-reverse
+      flex: 0 0 141px
+      height: 154px
+      margin-top: -75px
+
+    .copy-reverse
+      flex: 0 0 430px
+
+  .image-block
+    position: relative
+    width: 100%
+
+    .overlay
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+
+    &:hover
+      .overlay
+        opacity: 1
+
+  .image-copy-block
+    +flex
+    width: 100%
+    max-width: 980px
+    margin: 0 auto
+
+    img,
+    .copy
+      flex: 0 0 487px
+      height: 190px
+
+    .copy
+      +flex($b: center, $c: center)
+      padding-left: 40px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.content-blocks
+
+  .bold-copy-block,
+  .accent-copy-block,
+  .image-copy-block
+    @extend %Canela
+
+  .bold-copy-block
+    font-size: 2rem
+    line-height: 2.6rem
+    text-align: center
+
+  .accent-copy-block,
+  .image-copy-block .copy
+    font-size: 1.2rem
+    line-height: 1.8rem
+
+    em
+      font-size: 1rem
+      line-height: 5rem
+
+
+
