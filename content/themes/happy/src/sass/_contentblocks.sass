@@ -1,0 +1,188 @@
+/* _theme.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.content-blocks
+  width: 100%
+  // max-width: 1280px
+  margin: 0 auto
+  padding-top: 250px
+  padding-bottom: 200px
+  position: relative
+  z-index: 10
+
+  .bold-copy-block
+    width: 100%
+    max-width: 516px
+    margin: 0 auto
+
+  .accent-copy-block
+    +flex
+    width: 100%
+    max-width: 575px
+    margin: 100px auto 0
+
+    .icon
+      // width: 145px
+      // height: 82px
+
+    .copy
+      width: 100%
+      max-width: 330px
+      margin-left: 130px
+      margin-top: 20px
+
+    .icon-reverse
+      flex: 0 0 auto
+      // height: 154px
+      margin-top: -75px
+
+    .copy-reverse
+      flex: 0 0 430px
+
+  .image-block
+    position: relative
+    width: 100%
+    max-width: 1280px
+    margin: 0 auto
+
+    .overlay
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+
+    &:hover
+      .overlay
+        opacity: 1
+
+  .image-copy-block
+    +flex
+    width: 100%
+    max-width: 980px
+    margin: 0 auto
+
+    img,
+    .copy
+      flex: 0 0 487px
+      height: 190px
+
+    .copy
+      +flex($b: center, $c: center)
+      padding-left: 40px
+
+  .slider-block
+    position: relative
+    width: 100%
+    margin-top: 75px
+    padding-top: 55.55%
+
+    
+    .slide
+      +img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      padding-top: 55.55%
+
+  .paragraph-block
+    +flex
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    padding-left: 60px
+    padding-top: 75px
+
+    .copy
+      flex: 0 0 525px
+
+
+    img
+      flex: 0 0 auto
+      margin-top: 175px
+
+    h3
+      padding-bottom: 40px
+
+    .footnote
+      padding-top: 40px
+
+  .list-block
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    
+    .column-wrapper,
+    h3
+      width: 460px
+      margin-left: auto
+      padding-bottom: 20px
+
+    .pair
+      padding-bottom: 10px
+      padding-top: 10px
+
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.content-blocks
+
+  .bold-copy-block,
+  .accent-copy-block,
+  .image-copy-block,
+  .paragraph-block,
+  .list-block
+    @extend %Canela
+
+  .bold-copy-block
+     @extend %Can-large
+     text-align: center
+
+  .accent-copy-block,
+  .image-copy-block .copy
+    @extend %Can-small
+
+    em
+      font-size: 1rem
+      line-height: 5rem
+
+    .footnote
+      font-size: 1rem
+      line-height: 1.4rem
+
+  .paragraph-block
+    
+    h3
+      @extend %Can-large
+      text-align: left
+
+    p
+      @extend %Can-small
+
+    .footnote
+      font-size: 1rem
+      line-height: 1.4rem
+
+  .list-block
+    .column-wrapper
+      +col($a: 220px, $b: 2)
+
+    h3
+      @extend %Can-large
+      text-align: left
+
+    .main,
+    .sub  
+      @extend %Can-small
+
+
+
+

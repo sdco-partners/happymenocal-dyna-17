@@ -50,3 +50,9 @@ $break-small: 500px
     @content
   &:-ms-input-placeholder
     @content
+
+/* Columns */
+=col($a: 100px, $b: 3)
+  -webkit-columns: $a $b
+  -moz-columns: $a $b
+  columns: $a $b

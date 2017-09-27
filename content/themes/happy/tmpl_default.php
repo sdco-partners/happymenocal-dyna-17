@@ -6,6 +6,7 @@
  */
   get_header();  ?>
 
+<!-- SECTION: CONTENT BLOCKS -->
 <section class="content-blocks">
 
 <?php if(have_rows('default')) :

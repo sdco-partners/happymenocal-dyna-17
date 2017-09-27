@@ -6,9 +6,7 @@
  */ 
   get_header(); 
 
-  $color = get_field('color');
-
-  ?>
+  $color = get_field('color'); ?>
 
 <!-- SECTION: CONTENT BLOCKS -->
 <section class="content-blocks"

@@ -10,7 +10,9 @@ $copy = get_sub_field('copy'); ?>
 <div class="accent-copy-block">
   <?php if(!$is_reverse && $icon) : ?>
   <div class="icon">
-  	<img src="<?php echo $icon['url']; ?>">
+  	<img src="<?php echo $icon['url']; ?>"
+      style="width: <?php echo $icon['width']; ?>px; 
+      height: <?php echo $icon['height']; ?>px;">
   </div>
   <div class="copy">
   <?php else : ?> 

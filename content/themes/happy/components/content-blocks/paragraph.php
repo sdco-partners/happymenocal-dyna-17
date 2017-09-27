@@ -10,5 +10,7 @@
 	<div class="copy">
 		<?php echo get_sub_field('copy'); ?>
 	</div>
-	<img src="<?php echo $icon['url']; ?>">
+	<img src="<?php echo $icon['url']; ?>"
+	  style="width: <?php echo $icon['width']; ?>px; 
+      height: <?php echo $icon['height']; ?>px;">
 </div>
