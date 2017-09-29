@@ -27,6 +27,7 @@ header
 
   .right-link
     right: 50px
+    padding-bottom: 5px
 
   .logo
     left: calc(50% - 56px)
@@ -35,8 +36,15 @@ header
 
 .drop-down
   a
+    opacity: 0
     display: block
     margin-bottom: 20px
+
+    span
+      padding-bottom: 5px
+
+#toggle
+  padding-bottom: 5px
 
 
 /* OBJECTS -> For styling objects */
@@ -49,3 +57,14 @@ header
   a
     color: $black
 
+  .right-link,
+  #toggle
+
+    &:hover
+      border-bottom: 1px solid
+
+
+#toggle
+  cursor: pointer
+
+  

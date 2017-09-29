@@ -28,10 +28,13 @@
 	
   <title><?php wp_title( '-', true, 'right' ); ?></title>
 	
-  <?php wp_head(); ?>
+  <?php wp_head(); 
+    $post = 'postwp-' . $post->post_name;
+    $color = get_field('color'); ?>
+    
 </head>
-
-<body <?php body_class(); ?>>
+<body <?php body_class([$post]); ?>
+  style="background-color: <?php echo $color; ?>">
 
 <!-- SECTION: HEADER -->
 <header>
@@ -39,17 +42,18 @@
   while(have_rows('navigation', 'options')) : 
     the_row(); ?>
     <div class="left-nav">
-      <h2>Menu</h2>
+      <h2 id="toggle">Menu</h2>
     </div>
     <div class="drop-down">
     <?php if(have_rows('left_nav')) : 
       while(have_rows('left_nav')) : 
+        the_row();
         $title = get_sub_field('title');
         $link = get_sub_field('link');
         $class = strtolower(str_replace(' ', '-', $title));
-        the_row(); ?>
-        <a class="<?php echo $class; ?>" href="<?php echo $link; ?>">
-          <?php echo $title; ?>
+         ?>
+        <a id="<?php echo $class; ?>" href="<?php echo $link; ?>">
+          <span><?php echo $title; ?></span>
         </a>
       <?php endwhile;
       endif; ?>
@@ -61,7 +65,7 @@
     <?php if(have_rows('right_nav')) : 
       while(have_rows('right_nav')) :
         the_row(); ?>
-        <a hre="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('title'); ?></a>
+        <a href="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('title'); ?></a>
       <?php endwhile;
     endif; ?>
   </div>

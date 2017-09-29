@@ -4,7 +4,7 @@
   */
 
   $image_1 = get_sub_field('image_1');
-  $image_1 = get_sub_field('image_2');
+  $image_2 = get_sub_field('image_2');
   $copy = get_sub_field('copy');
   $icon = get_sub_field('icon');
   $note = get_sub_field('note');

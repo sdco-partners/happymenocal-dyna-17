@@ -6,10 +6,8 @@
 
 .content-blocks
   width: 100%
-  // max-width: 1280px
   margin: 0 auto
   padding-top: 250px
-  padding-bottom: 200px
   position: relative
   z-index: 10
 
@@ -22,11 +20,7 @@
     +flex
     width: 100%
     max-width: 575px
-    margin: 100px auto 0
-
-    .icon
-      // width: 145px
-      // height: 82px
+    margin: 0 auto
 
     .copy
       width: 100%
@@ -115,6 +109,7 @@
     width: 100%
     max-width: 800px
     margin: 0 auto
+    padding-top: 75px
     
     .column-wrapper,
     h3
@@ -126,7 +121,45 @@
       padding-bottom: 10px
       padding-top: 10px
 
+.project-links
+  +flex($b: center)
+  width: 550px
+  margin: 250px auto 0
 
+  .link
+    flex: 0 0 auto
+    padding-right: 15px
+    padding-left: 15px
+    padding-bottom: 15px
+
+    a
+      padding-bottom: 5px
+
+.next-project
+  position: relative;
+  z-index: 400
+
+  .link 
+    +flex($b: center)
+    width: 350px
+    margin: 0 auto
+    padding-bottom: 15px
+
+    span.label
+      flex: 0 0 auto
+      padding-right: 20px
+
+    span.title
+      flex: 0 0 auto
+      display: block
+
+      a
+        padding-bottom: 5px
+
+.watermarks
+  position: relative
+  width: 100%
+  height: 175px
 
 
 /* OBJECTS -> For styling objects */
@@ -139,7 +172,9 @@
   .accent-copy-block,
   .image-copy-block,
   .paragraph-block,
-  .list-block
+  .list-block,
+  .image-copy-a,
+  .image-copy-b
     @extend %Canela
 
   .bold-copy-block
@@ -147,7 +182,8 @@
      text-align: center
 
   .accent-copy-block,
-  .image-copy-block .copy
+  .image-copy-block .copy,
+  .image-copy-a .copy
     @extend %Can-small
 
     em
@@ -157,6 +193,7 @@
     .footnote
       font-size: 1rem
       line-height: 1.4rem
+      width: 215px
 
   .paragraph-block
     
@@ -171,6 +208,9 @@
       font-size: 1rem
       line-height: 1.4rem
 
+      a
+        color: $black
+
   .list-block
     .column-wrapper
       +col($a: 220px, $b: 2)
@@ -183,6 +223,36 @@
     .sub  
       @extend %Can-small
 
+  .slider-block
+    .slide
+      opacity: 0
+      transition: 0.8s opacity ease-in
+
+.project-links .link,
+.project-links .link a,
+.next-project .link,
+.next-project .link a
+  @extend %Can-large
+
+  span.label
+    @extend %Hell
+    font-style: normal
+
+.project-links
+  .link
+    a
+      color: $black
+
+      &:hover
+        border-bottom: 1px solid $black
+
+.next-project
+  .title
+    a
+      color: $black
+
+      &:hover
+        border-bottom: 1px solid $black
 
 
 

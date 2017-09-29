@@ -9,7 +9,30 @@
   height: 604px
   margin: 20vh auto 0
 
+  +tiny
+    width: 310px
+    height: auto
+    overflow: hidden
+
+    img 
+      width: 350px
+
+body .toggle-opacity,
+body .content-blocks .slider-block .toggle-opacity
+  opacity: 1
+  display: block
+
+body .toggle-active
+  opacity: 1
+  display: block
+
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.toggle-active
+  // border-bottom: 1px solid $black
+  span
+    border-bottom: 1px solid $black

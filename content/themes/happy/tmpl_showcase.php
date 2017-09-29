@@ -4,13 +4,10 @@
  * Template Name: Showcase
  *
  */ 
-  get_header(); 
-
-  $color = get_field('color'); ?>
+  get_header(); ?>
 
 <!-- SECTION: CONTENT BLOCKS -->
-<section class="content-blocks"
-  style="background-color: <?php echo $color; ?>">
+<section class="content-blocks">
   
 <?php if(have_rows('showcase')) :
   while(have_rows('showcase')) :
