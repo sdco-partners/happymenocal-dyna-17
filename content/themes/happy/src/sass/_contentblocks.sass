@@ -16,11 +16,17 @@
     max-width: 516px
     margin: 0 auto
 
+    +tiny
+      max-width: 310px
+
   .accent-copy-block
     +flex
     width: 100%
     max-width: 575px
     margin: 0 auto
+
+    +tiny
+      max-width: 260px
 
     .copy
       width: 100%
@@ -28,9 +34,18 @@
       margin-left: 130px
       margin-top: 20px
 
+      .footnote
+        width: 215px
+
+        +tiny
+          width: 100%
+
+      +tiny
+        width: 260px
+        margin-left: 0
+
     .icon-reverse
       flex: 0 0 auto
-      // height: 154px
       margin-top: -75px
 
     .copy-reverse
@@ -74,7 +89,9 @@
     margin-top: 75px
     padding-top: 55.55%
 
-    
+    +tiny
+      margin-top: 25px
+
     .slide
       +img
       position: absolute
@@ -94,10 +111,21 @@
     .copy
       flex: 0 0 525px
 
+      +tiny
+        flex: 0 0 100%
+
+    +tiny
+      max-width: 300px
+      padding-left: 40px
+      padding-right: 40px
+
 
     img
       flex: 0 0 auto
       margin-top: 175px
+
+      +tiny
+        margin-top: 0
 
     h3
       padding-bottom: 40px
@@ -110,12 +138,18 @@
     max-width: 800px
     margin: 0 auto
     padding-top: 75px
+
+    +tiny
+      max-width: 260px
     
     .column-wrapper,
     h3
       width: 460px
       margin-left: auto
       padding-bottom: 20px
+
+      +tiny
+        width: 260px
 
     .pair
       padding-bottom: 10px
@@ -126,6 +160,10 @@
   width: 550px
   margin: 250px auto 0
 
+  +tiny
+    width: 320px
+    margin: 180px auto 0
+
   .link
     flex: 0 0 auto
     padding-right: 15px
@@ -134,6 +172,11 @@
 
     a
       padding-bottom: 5px
+
+    +tiny
+      padding-right: 5px
+      padding-left: 5px
+      padding-bottom: 15px
 
 .next-project
   position: relative;
@@ -193,7 +236,6 @@
     .footnote
       font-size: 1rem
       line-height: 1.4rem
-      width: 215px
 
   .paragraph-block
     
@@ -214,6 +256,9 @@
   .list-block
     .column-wrapper
       +col($a: 220px, $b: 2)
+
+      +tiny
+        +col($a: 100px, $b: 2)
 
     h3
       @extend %Can-large

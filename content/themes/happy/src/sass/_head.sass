@@ -34,37 +34,62 @@ header
     width: 112px
     height: 117px
 
-.drop-down
-  a
-    opacity: 0
-    display: block
-    margin-bottom: 20px
+    +tiny
+      left: calc(50% - 45px)
+      width: 90px
+      height: 96px
 
-    span
+  .drop-down
+    +tiny
+      padding-top: 100px
+      left: 0
+
+    a
+      opacity: 0
+      display: block
+      margin-bottom: 20px
+
+      +tiny
+        display: inline-block
+        width: 100%
+
+      span
       padding-bottom: 5px
 
 #toggle
   padding-bottom: 5px
 
+.transparency
+  
+  +tiny
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
-
+ 
 header
   @extend %Hell
-
   a
     color: $black
 
   .right-link,
   #toggle
-
     &:hover
       border-bottom: 1px solid
 
-
 #toggle
   cursor: pointer
-
   
+.transparency
+  +tiny
+    // background-color: rgba(255,255,255,0.7)
+
+.drop-down
+  +tiny
+    text-align: center

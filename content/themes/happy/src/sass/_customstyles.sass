@@ -1,4 +1,4 @@
-/* _projects.sass */
+/* _customstyles.sass */
 
 /* PAGE CONTEXT -> For positioning items */
 /* includes positioning styles like display, padding, margin, height */
@@ -15,6 +15,9 @@ body.postwp-221-court-street
     max-width: 880px
     margin: 150px auto 0
 
+    +tiny
+      margin: 50px auto 0
+
     .image_1,
     .copy,
     .icon,
@@ -28,6 +31,15 @@ body.postwp-221-court-street
     .icon
       margin-left: -80px
       margin-top: 290px
+
+  .image_1
+    img 
+      padding-top: 55.55%
+
+      +tiny
+        max-width: 300px
+        // max-height: 100%
+        margin: 0 auto
 
   .watermarks
     position: relative
@@ -220,4 +232,4 @@ body.postwp-maison
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
-/* INCEPTION RULE: DO NOT nest more than 4  */
+/* INCEPTION RULE: DO NOT nest more than 4 
