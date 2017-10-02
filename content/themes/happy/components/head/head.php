@@ -25,7 +25,9 @@
   </div>
   <div class="transparency"></div>
   <div class="logo">
-    <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.gif">
+    <a href="<?php echo get_template_directory_uri(); ?>">
+      <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.gif">
+    </a>
   </div>
   <div class="right-link">
     <?php if(have_rows('right_nav')) : 
