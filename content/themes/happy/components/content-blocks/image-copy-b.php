@@ -14,21 +14,18 @@
 <div class="image-copy-a">
 	<div class="image_1">
 		<img src="<?php echo $image_1['url']; ?>"
-		  style="width: <?php echo $image_1['width']; ?>px;
-		  height: <?php echo $image_1['height']; ?>px">
+		  style="width: <?php echo $image_1['width']; ?>px;">
 	</div>
 	<div class="image_2">
 		<img src="<?php echo $image_2['url']; ?>"
-		  style="width: <?php echo $image_2['width']; ?>px;
-		  height: <?php echo $image_2['height']; ?>px">
+		  style="width: <?php echo $image_2['width']; ?>px;">
 	</div>
 	<div class="copy">
 		<?php echo $copy; ?>
 	</div>
 	<div class="icon">
 		<img src="<?php echo $icon['url']; ?>"
-		  style="width: <?php echo $icon['width']; ?>px;
-		  height: <?php echo $icon['height']; ?>px">
+		  style="width: <?php echo $icon['width']; ?>px;">
 	</div>
 	<div class="note">
 		<?php echo $note; ?>

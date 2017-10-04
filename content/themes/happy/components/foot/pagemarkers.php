@@ -13,7 +13,9 @@
   <?php endif; ?>
 </div>
 <div class="right-bottom-mark">
-  INSTAGRAM
+	<a href="">
+    INSTAGRAM
+  </a>
 </div>
 <div class="left-bottom-mark">
   &copy; HAPPY MENOCAL <?php echo date('Y'); ?>

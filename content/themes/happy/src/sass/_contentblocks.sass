@@ -10,6 +10,10 @@
   padding-top: 250px
   position: relative
   z-index: 10
+  overflow-x: hidden
+
+  +tiny
+    padding-top: 125px
 
   .bold-copy-block
     width: 100%
@@ -48,8 +52,27 @@
       flex: 0 0 auto
       margin-top: -75px
 
+      +tablet
+        flex: 0 0 115px
+        margin-top: -50px
+
+      +tiny
+        margin-top: 0
+
+      img
+        +tablet
+          max-width: 115px
+          display: block
+          margin-left: auto
+
     .copy-reverse
       flex: 0 0 430px
+
+      +tablet
+        flex: 0 0 430px
+
+      +tiny
+        flex: 0 0 200px
 
   .image-block
     position: relative
@@ -77,7 +100,10 @@
     img,
     .copy
       flex: 0 0 487px
-      height: 190px
+
+      +tiny
+        flex: 0 0 300px
+        height: initial
 
     .copy
       +flex($b: center, $c: center)
@@ -109,15 +135,15 @@
     padding-top: 75px
 
     .copy
-      flex: 0 0 525px
+      flex: 0 0 500px
 
       +tiny
         flex: 0 0 100%
 
     +tiny
-      max-width: 300px
-      padding-left: 40px
-      padding-right: 40px
+      max-width: 260px
+      padding-left: 0
+      padding-right: 0
 
 
     img
@@ -129,6 +155,9 @@
 
     h3
       padding-bottom: 40px
+
+      +tiny
+        padding-bottom: 20px
 
     .footnote
       padding-top: 40px
@@ -159,10 +188,12 @@
   +flex($b: center)
   width: 550px
   margin: 250px auto 0
+  position: relative
+  z-index: 700
 
   +tiny
-    width: 320px
-    margin: 180px auto 0
+    width: 300px
+    margin: 130px auto 0
 
   .link
     flex: 0 0 auto
@@ -181,6 +212,8 @@
 .next-project
   position: relative;
   z-index: 400
+  width: 100%
+  overflow-x: hidden
 
   .link 
     +flex($b: center)
@@ -199,11 +232,16 @@
       a
         padding-bottom: 5px
 
+
 .watermarks
   position: relative
   width: 100%
   height: 175px
+  // overflow-x: hidden
 
+.image-copy-a
+  .image_2
+    // transition: 0.4s all ease-in
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -233,9 +271,16 @@
       font-size: 1rem
       line-height: 5rem
 
+      +tablet
+        font-size: 0.85rem
+        line-height: 1.5rem
+
     .footnote
       font-size: 1rem
       line-height: 1.4rem
+
+      +tiny
+        font-size: 0.86rem
 
   .paragraph-block
     
@@ -249,6 +294,9 @@
     .footnote
       font-size: 1rem
       line-height: 1.4rem
+
+      +tiny
+        font-size: 0.85rem
 
       a
         color: $black
@@ -270,9 +318,9 @@
 
   .slider-block
     .slide
-      opacity: 0
-      transition: 0.8s opacity ease-in
-
+      opacity: 1
+      transition: 0.5s opacity ease-in-out
+ 
 .project-links .link,
 .project-links .link a,
 .next-project .link,
@@ -299,5 +347,6 @@
       &:hover
         border-bottom: 1px solid $black
 
-
+// .image_2
+//   transition: transform 0.1s ease
 

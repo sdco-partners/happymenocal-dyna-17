@@ -17,17 +17,30 @@ header
   .drop-down 
     left: 50px
 
+    +tiny
+      left: 25px
+
   .left-nav,
   .right-link,
   .logo
     top: 50px
 
+    +tiny
+      top: 25px
+
   .drop-down
     top: 100px
+
+    +tiny 
+      display: none
 
   .right-link
     right: 50px
     padding-bottom: 5px
+    z-index: 750
+
+    +tiny
+      right: 25px
 
   .logo
     left: calc(50% - 56px)
@@ -35,38 +48,46 @@ header
     height: 117px
 
     +tiny
+      top: 5px
       left: calc(50% - 45px)
       width: 90px
       height: 96px
+      z-index: 10
 
   .drop-down
     +tiny
       padding-top: 100px
       left: 0
+      width: 100%
 
     a
+      position: relative
       opacity: 0
       display: block
       margin-bottom: 20px
+      z-index: -10
 
       +tiny
-        display: inline-block
+        display: none
         width: 100%
+        margin-bottom: 50px
 
       span
-      padding-bottom: 5px
+        padding-bottom: 5px
 
 #toggle
   padding-bottom: 5px
 
-.transparency
+#transparency
   
   +tiny
-    position: absolute
+    opacity: 0
+    position: fixed
     top: 0
     left: 0
     width: 100vw
     height: 100vh
+    z-index: -10
 
 
 /* OBJECTS -> For styling objects */
@@ -86,10 +107,19 @@ header
 #toggle
   cursor: pointer
   
-.transparency
+#transparency
   +tiny
-    // background-color: rgba(255,255,255,0.7)
+    background-color: rgba(255,255,255,0.9)
 
 .drop-down
   +tiny
     text-align: center
+
+  a
+    +tiny
+      font-size: 0.7rem
+
+    &:hover
+
+      span
+        border-bottom: 1px solid $black

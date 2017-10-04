@@ -10,18 +10,27 @@
   .right-bottom-mark,
   .left-bottom-mark
     position: fixed
-    z-index: 800
+    z-index: 750
 
   .right-middle-mark,
   .right-bottom-mark
     right: 50px
 
+    +tiny
+      right: 25px
+
   .left-bottom-mark
     left: 50px
+
+    +tiny
+      left: 25px
 
   .right-bottom-mark,
   .left-bottom-mark
     bottom: 50px
+
+    +tiny
+      bottom: 25px
 
   .right-middle-mark
     bottom: calc(50vh - 82px)
@@ -35,9 +44,9 @@
   .left-bottom-mark
     transform-origin: left top 0
     transform: rotate(-90deg)
-
-    +tiny
-      transform: rotate(0)
+  
+  .right-bottom-mark a
+    padding-bottom: 5px
 
 
 /* OBJECTS -> For styling objects */
@@ -47,4 +56,11 @@
 
 .pagemarkers
   @extend %Hell
+
+.right-bottom-mark a
+  color: $black
+
+  &:hover
+    border-bottom: 1px solid $black
+
 

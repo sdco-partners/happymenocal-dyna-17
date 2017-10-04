@@ -11,8 +11,7 @@ $copy = get_sub_field('copy'); ?>
   <?php if(!$is_reverse && $icon) : ?>
   <div class="icon">
   	<img src="<?php echo $icon['url']; ?>"
-      style="width: <?php echo $icon['width']; ?>px; 
-      height: <?php echo $icon['height']; ?>px;">
+      style="width: <?php echo $icon['width']; ?>px;">
   </div>
   <div class="copy">
   <?php else : ?> 

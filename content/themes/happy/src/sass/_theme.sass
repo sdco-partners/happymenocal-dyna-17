@@ -10,23 +10,34 @@
   margin: 20vh auto 0
 
   +tiny
-    width: 320px
+    width: 100%
     height: auto
     overflow: hidden
 
     img 
-      width: 350px
+      width: 100%
 
-body header .toggle-opacity,
 body .content-blocks .slider-block .toggle-opacity
+  opacity: 0
+
+  +tiny
+    display: inline-block
+
+body header .toggle-opacity
   opacity: 1
   display: block
+  z-index: 850
 
-body .toggle-active
+body header .toggle-active
   opacity: 1
   display: block
+  z-index: 850
 
+body header #transparency.toggle-opacity
+  z-index: 775
 
+  +tiny
+    opacity: 1
 
 
 

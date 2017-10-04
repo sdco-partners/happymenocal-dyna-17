@@ -9,7 +9,7 @@
 <div class="slider-block">
 	<?php if ($gallery) : 
 	  foreach($gallery as &$image) : ?>
-	<div class="slide toggle-opacity"
+	<div class="slide"
 	  style="background-image: url(<?php echo $image['url']; ?>)"></div>
 <?php endforeach; endif; ?>
 </div>

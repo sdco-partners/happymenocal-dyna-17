@@ -23,10 +23,10 @@
       <?php endwhile;
       endif; ?>
   </div>
-  <div class="transparency"></div>
+  <div id="transparency"></div>
   <div class="logo">
     <a href="<?php echo get_template_directory_uri(); ?>">
-      <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.gif">
+      <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.png">
     </a>
   </div>
   <div class="right-link">
