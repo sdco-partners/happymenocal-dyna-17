@@ -8,6 +8,9 @@ var $j = jQuery.noConflict();
 
 $j(document).ready(function(){
 
+	// Fade in
+	$j('body').removeClass('initialize');
+
 	// Menu Toggle Functionality
 	$j('#toggle').on('click', function(){
 		var isOpen = $j('#toggle').hasClass('open');
@@ -25,6 +28,33 @@ $j(document).ready(function(){
 		}
 	});
 
+	// AJAX LOADING
+	$j('.right-link a').on('click', function(e){
+    e.preventDefault();
+    console.log();
+
+    var routerPath = 'http://' + window.location.host;
+    routerPath += '/happymenocal-dyna-17';
+    routerPath += '/content/themes/happy/router.php';
+
+
+    var params = {};
+    params = {
+    	data: {
+    	'post_id': 12,
+    	'action': 'f711_get_post_content'
+    	}
+    };
+
+    $j.post(STANDARD.ajaxurl, params)
+    .done(function(data){
+      console.log('success! ', data)
+    })
+    .fail(function(err){
+      console.log('AJAX error: ', err);
+    }, 'html');
+
+	})
 
 
 	// Toggle styles based on page type
@@ -48,13 +78,19 @@ $j(document).ready(function(){
 
 
 	// Trigger Animations
-	$j(window).scroll(function(){
-		var scroll = $j(window).scrollTop();
-		var mutator = 25;
-		var mutate = scroll/mutator;
-		$j('.image_2').css({'transform': 'translateX(0) translateY(-' + mutate + 'px)'});
-		$j('.watermarks img').css({'transform': 'translateX(0) translateY(-' + mutate + 'px)'});
-	});
+	if($j('.single').length){	
+		$j(window).scroll(function(){ 
+			var scroll = $j(window).scrollTop();
+			var mutator = 15;
+			var mutate =  scroll/mutator;
+
+			if($j('.image_2').length){
+				$j('.image_2').css({'transform': 'translateX(0) translateY(-' + mutate + 'px)'});
+			} else if ($j('.icon').length) {
+				$j('.icon').css({'transform': 'translateX(0) translateY(' + mutate + 'px)'});
+			}
+	  });
+	}
 
 
 });

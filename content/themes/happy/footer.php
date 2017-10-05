@@ -24,10 +24,11 @@
     <?php include(locate_template('components/foot/watermarks.php')); ?>
 
 	</section>
+</div>
 
 	<!-- SCRIPTS -->
 	<?php wp_footer(); ?>
-
+	
 </body><!-- end -->
 </html>
 

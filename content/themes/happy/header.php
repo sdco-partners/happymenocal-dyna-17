@@ -27,11 +27,14 @@
 	
   <?php wp_head(); 
     $post = 'postwp-' . $post->post_name;
+    $initialize = 'initialize';
     $color = get_field('color'); ?>
     
 </head>
-<body <?php body_class([$post]); ?>
+<body <?php body_class([$post, $initialize]); ?>
   style="background-color: <?php echo $color; ?>">
+
+<div id="root">
 
 <!-- SECTION: HEADER -->
 <header>

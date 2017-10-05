@@ -33,7 +33,9 @@
     <?php if(have_rows('right_nav')) : 
       while(have_rows('right_nav')) :
         the_row(); ?>
-        <a href="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('title'); ?></a>
+        <a id="ajx-<?php echo get_sub_field('title'); ?>" href="<?php echo get_sub_field('link'); ?>">
+          <?php echo get_sub_field('title'); ?>
+        </a>
       <?php endwhile;
     endif; ?>
   </div>
