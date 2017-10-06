@@ -16,7 +16,7 @@
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
   <script type="text/javascript">
-	document.documentElement.setAttribute("data-browser", navigator.userAgent);
+	  document.documentElement.setAttribute("data-browser", navigator.userAgent);
   </script>
   <script src="//localhost:35729/livereload.js"></script>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -25,18 +25,22 @@
 	
   <title><?php wp_title( '-', true, 'right' ); ?></title>
 	
-  <?php wp_head(); 
+  <?php wp_head();
     $post = 'postwp-' . $post->post_name;
     $initialize = 'initialize';
-    $color = get_field('color'); ?>
+    if(get_field('color')) :
+      $color = get_field('color');
+    else :
+      $color = '#fff';
+    endif; ?>
     
 </head>
-<body <?php body_class([$post, $initialize]); ?>
-  style="background-color: <?php echo $color; ?>">
+<body <?php body_class([$post, $initialize]); ?> style="background-color: <?php echo $color; ?>">
 
-<div id="root">
+<div class="popcorn"> <!-- DUMMY -->
+  <div class="root" id="prime"> <!-- AJAX CONTAINER -->
 
-<!-- SECTION: HEADER -->
-<header>
-  <?php include(locate_template('components/head/head.php')); ?>
-</header>
+    <!-- SECTION: HEADER -->
+    <header>
+      <?php include(locate_template('components/head/head.php')); ?>
+    </header>

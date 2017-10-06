@@ -31,7 +31,7 @@
 
     elseif(get_row_layout() === 'accent') :
 
-      include(locate_template('components/content-blocks/accent.php'));
+       include(locate_template('components/content-blocks/accent.php'));
 
     endif;
 
@@ -41,4 +41,4 @@ endif; ?>
 
 </section>
 
-  <?php get_footer(); ?>
+<?php get_footer(); ?>

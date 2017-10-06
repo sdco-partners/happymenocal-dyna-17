@@ -12,15 +12,13 @@
 
 <div class="image-copy-a">
 	<div class="image_1">
-		<img src="<?php echo $image_1['url']; ?>"
-		  style="width: <?php echo $image_1['width']; ?>px;">
+		<img src="<?php echo $image_1['url']; ?>" style="width: <?php echo $image_1['width']; ?>px;" alt="happy menocal">
 	</div>
 	<div class="copy">
 		<?php echo $copy; ?>
 	</div>
 	<div class="icon">
-		<img src="<?php echo $icon['url']; ?>"
-		  style="width: <?php echo $icon['width']; ?>px;">
+		<img src="<?php echo $icon['url']; ?>" style="width: <?php echo $icon['width']; ?>px;" alt="happy menocal">
 	</div>
 	<div class="note">
 		<?php echo $note; ?>

@@ -10,8 +10,7 @@ $copy = get_sub_field('copy'); ?>
 <div class="accent-copy-block">
   <?php if(!$is_reverse && $icon) : ?>
   <div class="icon">
-  	<img src="<?php echo $icon['url']; ?>"
-      style="width: <?php echo $icon['width']; ?>px;">
+  	<img src="<?php echo $icon['url']; ?>" style="width: <?php echo $icon['width']; ?>px;" alt="happy menocal">
   </div>
   <div class="copy">
   <?php else : ?> 
@@ -21,7 +20,8 @@ $copy = get_sub_field('copy'); ?>
   </div>
   <?php if($is_reverse && $icon) : ?>
   <div class="icon-reverse">
-    <img src="<?php echo $icon['url']; ?>">
+    <img src="<?php echo $icon['url']; ?>" alt="happy menocal">
   </div>
-<?php endif; ?>
+  <?php endif; ?>
 </div>
+

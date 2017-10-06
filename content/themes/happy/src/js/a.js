@@ -31,42 +31,60 @@ $j(document).ready(function(){
 	// AJAX LOADING
 	$j('.right-link a').on('click', function(e){
     e.preventDefault();
-    console.log();
 
     var routerPath = 'http://' + window.location.host;
     routerPath += '/happymenocal-dyna-17';
     routerPath += '/content/themes/happy/router.php';
 
 
-    var params = {};
-    params = {
-    	data: {
-    	'post_id': 12,
-    	'action': 'f711_get_post_content'
-    	}
-    };
+    // var params = {
+    // 	'post_id': 12,
+    // 	'action': 'f711_get_post_content'
+    // };
 
-    $j.post(STANDARD.ajaxurl, params)
-    .done(function(data){
-      console.log('success! ', data)
-    })
+    // $j.post(STANDARD.ajaxurl, params)
+    // .done(function(data){
+    //   console.log('success! ', data)
+    // })
+    // .fail(function(err){
+    //   console.log('AJAX error: ', err);
+    // }, 'html');
+
+    var params = $j(this).attr('href');
+
+    $j.get(params,function(){},'html')
     .fail(function(err){
-      console.log('AJAX error: ', err);
-    }, 'html');
+      console.log('POST failed: ', err);
+    })
+    .success(function(resp){
+    	console.log('success!');
+    	var rootHTML = $j(resp).find('.root');
+    	var findBodyClasses = resp.match(/<body.*class=["']([^"'"]*)["'"].*>/);
+    	var newBodyClasses = findBodyClasses[1].replace('initialize', '');
 
-	})
+      $j('body #prime').after('<div class="root" id="inject"></div>');
+      $j('div.root#inject').html(rootHTML.children());
+      $j('body #prime').fadeOut().remove();
+      $j('body').removeAttr('class').attr('class', newBodyClasses);
+      $j('body .root').removeAttr('id').attr('id', 'prime');
+
+    })
+
+	});
 
 
 	// Toggle styles based on page type
 	var pageClasses = $j('body').attr('class');
-	pageClasses = pageClasses.split(' ');
+	if (pageClasses) {
+		pageClasses = pageClasses.split(' ');
+	  inspectPageType(pageClasses, function(thisClass, prefix){
+	    var pageName = thisClass.replace(prefix, '');
+	    $j('#' + pageName).addClass('toggle-active');
+	  }, function(thisClass, prefix){
+			$j('#special-projects').addClass('toggle-active');
+	  });
+	}
 
-  inspectPageType(pageClasses, function(thisClass, prefix){
-    var pageName = thisClass.replace(prefix, '');
-    $j('#' + pageName).addClass('toggle-active');
-  }, function(thisClass, prefix){
-		$j('#special-projects').addClass('toggle-active');
-  });
 
 
 

@@ -7,7 +7,7 @@
 
 <div class="right-middle-mark">
 	<?php if($is_single) : ?>
-    <?php echo $wp_query->post->post_title; ?>
+    <?php  echo $wp_query->post->post_title; ?>
   <?php else : ?>
     happy menocal studio
   <?php endif; ?>

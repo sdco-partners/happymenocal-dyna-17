@@ -11,5 +11,5 @@
 		<?php echo get_sub_field('copy'); ?>
 	</div>
 	<img src="<?php echo $icon['url']; ?>"
-	  style="width: <?php echo $icon['width']; ?>px;">
+	  style="width: <?php echo $icon['width']; ?>px;" alt="happy menocal icon">
 </div>
