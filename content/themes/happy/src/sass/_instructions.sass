@@ -1,0 +1,80 @@
+/* _instructions.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.instruction-block
+  width: 100%
+  max-width: 1280px
+  margin: 0 auto
+  padding-left: 60px
+  padding-right: 60px
+
+  .instruction
+    +flex
+    margin-bottom: 40px
+
+  .image
+    flex: 0 0 60%
+    padding-right: 30px
+
+  .copy
+    flex: 1 0 40%
+    margin: 0 auto
+
+  h3
+    padding-top: 180px
+  
+  h4
+    padding-top: 15px
+    padding-bottom: 25px
+
+  p 
+    padding-bottom: 25px
+
+  strong
+    padding-left: 4px
+    padding-right: 4px
+
+  .nav
+	  +flex($b: center)
+	  width: 550px
+	  margin: 250px auto 0
+
+	  .link
+	    flex: 0 0 auto
+	    padding-right: 15px
+	    padding-left: 15px
+	    padding-bottom: 15px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.instruction-block
+
+  h3
+    @extend %Can-large
+
+  strong,
+  h4
+    @extend %Hell
+    font-size: 13px
+    font-style: normal
+
+  h3
+    text-align: center
+
+  p
+    @extend %Can-small
+
+  .nav
+    @extend %Can-large
+
+    a
+      color: $black
+
+      &:hover
+        border-bottom: 1px solid $black
+

@@ -5,6 +5,8 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 header
+  position: relative
+  width: 100%
 
   .left-nav,
   .drop-down,
@@ -53,7 +55,7 @@ header
       left: calc(50% - 45px)
       width: 90px
       height: 96px
-      z-index: 10
+      z-index: 800
 
   .drop-down
     +tiny
@@ -79,8 +81,7 @@ header
 #toggle
   padding-bottom: 5px
 
-#transparency
-  
+#transparency  
   +tiny
     opacity: 0
     position: fixed
@@ -89,6 +90,20 @@ header
     width: 100vw
     height: 100vh
     z-index: -10
+
+.popcorn
+  position: relative
+  width: 100%
+
+.root
+  opacity: 1
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  // transform: translate(0,0px)
+  // transition: transform 0.5s ease, opacity 2s ease
+
 
 
 /* OBJECTS -> For styling objects */

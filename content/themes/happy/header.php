@@ -37,10 +37,11 @@
 </head>
 <body <?php body_class([$post, $initialize]); ?> style="background-color: <?php echo $color; ?>">
 
-<div class="popcorn"> <!-- DUMMY -->
-  <div class="root" id="prime"> <!-- AJAX CONTAINER -->
+<!-- SECTION: HEADER -->
+<header>
+  <?php include(locate_template('components/head/head.php')); ?>
+</header>
 
-    <!-- SECTION: HEADER -->
-    <header>
-      <?php include(locate_template('components/head/head.php')); ?>
-    </header>
+<!-- SECTION: AJAX Containers -->
+<div class="popcorn"> 
+  <div class="root" id="prime" style="background-color: <?php echo $color; ?>">

@@ -39,8 +39,35 @@ body header #transparency.toggle-opacity
   +tiny
     opacity: 1
 
+
+body header .logo.toggle-opacity
+  +tiny
+    z-index: 10
+
 .image_2
   transition: transform 0.1s ease
+
+.popcorn
+  position: relative
+  width: 100%
+
+.root
+  opacity: 1
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  // transform: translate(0,0px)
+  // transition: transform 0.5s ease, opacity 2s ease
+
+.root.inject
+  transform: translate(200vw, 0px)
+  opacity: 0 
+
+body .root.slide
+  transform: translate(0,0)
+  opacity: 1
+
 
 
 /* OBJECTS -> For styling objects */

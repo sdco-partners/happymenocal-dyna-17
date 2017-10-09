@@ -26,7 +26,7 @@ if(have_rows('navigation', 'option')) :
   <div id="transparency"></div>
   <div class="logo">
     <a href="<?php echo get_template_directory_uri(); ?>">
-      <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.png" alt="Happy Menocal Logo">
+      <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-main.svg" alt="Happy Menocal Logo">
     </a>
   </div>
   <div class="right-link">
