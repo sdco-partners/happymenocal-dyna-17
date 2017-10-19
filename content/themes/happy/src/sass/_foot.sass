@@ -8,7 +8,8 @@
 
   .right-middle-mark,
   .right-bottom-mark,
-  .left-bottom-mark
+  .left-bottom-mark,
+  .middle-bottom-mark
     position: fixed
     z-index: 750
     transition: all 0.4s 1s ease
@@ -26,12 +27,16 @@
     +tiny
       left: 25px
 
+  .middle-bottom-mark
+    left: calc(50vw - 75px)
+
   .right-bottom-mark,
-  .left-bottom-mark
+  .left-bottom-mark,
+  .middle-bottom-mark
     top: calc(100vh - 50px)
 
     +tiny
-      bottom: 25px
+      top: calc(100vh - 100px)
 
   .right-middle-mark
     bottom: calc(50vh - 82px)
@@ -46,7 +51,8 @@
     transform-origin: left top 0
     transform: rotate(-90deg)
   
-  .right-bottom-mark a
+  .right-bottom-mark a,
+  .middle-bottom-mark a
     padding-bottom: 5px
 
 
@@ -58,10 +64,15 @@
 .pagemarkers
   @extend %Hell
 
-.right-bottom-mark a
+.right-bottom-mark a,
+.middle-bottom-mark a
   color: $black
 
   &:hover
     border-bottom: 1px solid $black
+
+.middle-bottom-mark,
+.middle-bottom-mark a
+  color: $black
 
 

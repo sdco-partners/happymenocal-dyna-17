@@ -13,8 +13,13 @@
   <?php endif; ?>
 </div>
 <div class="right-bottom-mark">
-	<a href="">
+	<a href="https://www.instagram.com/happymenocalstudio/">
     INSTAGRAM
+  </a>
+</div>
+<div class="middle-bottom-mark">
+	Site by <a href="https://www.sdcopartners.com" target="_blank">
+    SDCO Partners
   </a>
 </div>
 <div class="left-bottom-mark">

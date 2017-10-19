@@ -62,21 +62,21 @@ $j(document).ready(function(){
 
 
 	// Trigger Animations
-	if($j('.single').length){	
-		$j(window).scroll(function(){ 
-			var scroll = $j(window).scrollTop();
-			var mutator = 15;
-			var mutate =  scroll/mutator;
+	// if($j('.single').length){	
+	// 	$j(window).scroll(function(){ 
+	// 		var scroll = $j(window).scrollTop();
+	// 		var mutator = 15;
+	// 		var mutate =  scroll/mutator;
       
-      if ($j('body.postwp-marion').length) {
-        console.log('animation disabled');
-      } else if($j('body .image_2').length){
-				$j('body .image_2').css({'transform': 'translateX(0) translateY(-' + mutate + 'px)'});
-			} else if ($j('.icon').length) {
-				$j('body .icon').css({'transform': 'translateX(0) translateY(' + mutate + 'px)'});
-			}
-	  });
-	}
+ //      if ($j('body.postwp-marion').length) {
+ //        console.log('animation disabled');
+ //      } else if($j('body .image_2').length){
+	// 			$j('body .image_2').css({'transform': 'translateX(0) translateY(-' + mutate + 'px)'});
+	// 		} else if ($j('.icon').length) {
+	// 			$j('body .icon').css({'transform': 'translateX(0) translateY(' + mutate + 'px)'});
+	// 		}
+	//   });
+	// }
 
 	// Smooth Hash Scrolling
 	if($j('.postwp-instructions').length) {
