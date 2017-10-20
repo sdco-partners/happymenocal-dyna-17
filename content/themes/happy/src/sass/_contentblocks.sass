@@ -247,6 +247,12 @@
         padding-bottom: 5px
 
 
+.paragraph-block,
+.accent-copy-block
+  .footnote
+    a
+      padding-bottom: 8px
+
 .watermarks
   position: relative
   width: 100%
@@ -296,7 +302,8 @@
       +tiny
         font-size: 0.86rem
 
-  .paragraph-block
+  .paragraph-block,
+  .accent-copy-block
     
     h3
       @extend %Can-large
@@ -314,6 +321,9 @@
 
       a
         color: $black
+
+        &:hover
+          border-bottom: 1px solid $black
 
   .list-block
     .column-wrapper

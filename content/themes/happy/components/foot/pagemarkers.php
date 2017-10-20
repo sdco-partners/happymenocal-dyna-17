@@ -17,11 +17,6 @@
     INSTAGRAM
   </a>
 </div>
-<div class="middle-bottom-mark">
-	Site by <a href="https://www.sdcopartners.com" target="_blank">
-    SDCO Partners
-  </a>
-</div>
 <div class="left-bottom-mark">
   &copy; HAPPY MENOCAL <?php echo date('Y'); ?>
 </div>
