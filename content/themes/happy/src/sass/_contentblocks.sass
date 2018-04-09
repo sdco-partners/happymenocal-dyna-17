@@ -274,7 +274,6 @@ body.page-template-tmpl_shop
         padding-left: 0
         padding-right: 0
 
-
     .paragraph-block
       max-width: 550px
       padding-top: 25px
@@ -293,6 +292,7 @@ body.page-template-tmpl_shop
       p.link
         padding-top: 30px
         padding-bottom: 5px
+        margin-bottom: -15px
 
       a
         padding-bottom: 5px
@@ -311,28 +311,40 @@ body.page-template-tmpl_shop
     .grid-block
       position: relative
       width: 100%
-      max-width: 600px
+      max-width: 700px
       margin: 0 auto
+      +tablet
+        max-width: 600px
 
       div.image-grid
+        margin-bottom: 50px
+        +tablet
+          max-width: 250px
+        +tiny
+          max-width: 200px
+
         img
           width: 100%
           +tiny
             max-width: 260px
-
-        +tiny
-          max-width: 260px
             
+        p.caption
+          padding-top: 30px
 
       div.image-grid:nth-child(even)
         margin-left: auto
+
+      div.image-grid:nth-child( n + 2 )
+        margin-top: -140px
+        +tiny
+          margin-top: 0
 
 
     .row-block
       +flex
       position: relative
       width: 100%
-      max-width: 700px
+      max-width: 725px
       margin: 0 auto
       padding-top: 170px
       padding-bottom: 75px
