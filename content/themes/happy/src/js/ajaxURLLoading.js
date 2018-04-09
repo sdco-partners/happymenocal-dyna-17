@@ -9,7 +9,7 @@ var ajaxURLLoading = function(params) {
   	// Disabled
   }, 'html')
   .fail(function(err){
-    console.log('POST failed: ', err);
+    console.log('GET failed: ', err);
   })
   .success(function(resp){
   	console.log('success!');
